@@ -1,4 +1,4 @@
-import 'package:bookui/screen/home_screen.dart';
+import 'package:bookui/screens/home_screen.dart';
 import 'package:flappy_search_bar/flappy_search_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFF3EBACE),
         accentColor: Color(0xFFD8ECF1),
         scaffoldBackgroundColor: Color(0xFFF3F5F7),
+        highlightColor: Color(0xfff5b0ac),
       ),
       home: HomeScreen(),
     );
