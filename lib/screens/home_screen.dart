@@ -3,6 +3,7 @@ import 'package:bookui/widgets/books_carousel.dart';
 import 'package:bookui/widgets/new_books_carousel.dart';
 import 'package:flappy_search_bar/flappy_search_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 class HomeScreen extends StatefulWidget {
   final Book book;
 
@@ -54,33 +55,36 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               SizedBox(height: 20,),
               Stack(
                 children:[
-                  Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all( color: Theme.of(context).highlightColor),
+                  TextField(
+                  maxLengthEnforced: true,
+                  style: GoogleFonts.openSans(
+                    fontSize: 12,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w600
                   ),
-                ),
+                    decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(left: 20, right: 50,bottom: 20),
+                      border: InputBorder.none,
+                      hintText: 'Search book..',
+                      hintStyle: GoogleFonts.openSans(
+                          fontSize: 12,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w600
+                      ))
+
+                    ),
                 Positioned(
                   right: 0,
                   child: Container(
-                      width: 50,
-                      height: 50,
+                      width: 30,
+                      height: 30,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Theme.of(context).highlightColor,
                       ),
-                      child: Icon(Icons.search, color: Colors.white70, size: 30,),
+                      child: Icon(Icons.search, color: Colors.white70, size: 20,),
                   ),
                 ),
-                Positioned(
-                  left: 15,
-                 top: 15,
-                 child: Text('Search book..', style: TextStyle(
-                   fontWeight: FontWeight.bold,
-                   color: Colors.grey
-                 ),),
-                )
                 ]
               ),
               SizedBox(height: 20,),
